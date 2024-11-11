@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/saturn.png" type="image/x-icon"> 
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Threejs | Project 1</title>
+  <style>
+
+    .scroll-down-message {
+      position: absolute;
+      bottom: 20px; 
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      animation: scroll 1s ease-in-out infinite;
+    }
+
+    .arrow {
+      margin-left: 8px; 
+      font-size: 1.5rem; 
+    }
+
+    @keyframes scroll {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="w-full overflow-hidden">
+    <div class="w-full h-screen absolute top-0 left-0 z-[2] text-white font-['Helvetica Now Display']">
+      <nav class="w-full flex justify-between items-centre py-4 px-10">
+        <h3>Planets</h3>
+        <div class="flex gap-6">
+          <a class="text-sm" href="#">Home</a>
+          <a class="text-sm" href="#">About</a>
+          <a class="text-sm" href="#">Contact</a>
+        </div>
+      </nav>
+    <canvas id="canvas"></canvas>
+    <div class="absolute top-[8%] left-1/2 -translate-x-1/2 text-center font-['Bellina'] scroll-down">
+      <div class="w-full h-[9em] overflow-hidden">
+      <h1 class="h-full text-9xl font-Light tracking-tighte">Earth</h1>
+      <h1 class="h-full text-9xl font-Light tracking-tighte">Scilla</h1>
+      <h1 class="h-full text-9xl font-Light tracking-tighte">Volcanic</h1>
+      <h1 class="h-full text-9xl font-Light tracking-tighte">Venus</h1>
+    </div>
+      <p class="text-sm font-['Gilroy']">Explore the wonders of solar system, brought to life with Three.js.</p>
+
+      <div class="w-96 h-px bg-gradient-to-r from-transparent via-white to-transparent mt-4 mx-auto"></div>
+      
+    </div>
+
+   
+    <div class="scroll-down-message">Scroll Down <span class="arrow">&darr;</span></div>
+   
+  <script type="module" src="main.js"></script>
+  <script>
+   
+    window.addEventListener('scroll', () => {
+      const scrollDownElement = document.querySelector('.scroll-down');
+      if (window.scrollY > 0) {
+        scrollDownElement.classList.add('scroll-down');
+      } else {
+        scrollDownElement.classList.remove('scroll-down');
+      }
+    });
+  </script>
+</body>
+</html>
