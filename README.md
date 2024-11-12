@@ -14,6 +14,10 @@ A 3D interactive web experience that brings the planets of our solar system to l
 - **Three.js**: For rendering 3D objects and handling the WebGL elements.
 - **GSAP**: For smooth animations and transitions between scenes.
 - **JavaScript (ES6)**: Core programming language for the interactive elements.
+  
+<img width="1440" alt="Screenshot 2024-11-12 at 10 10 56 AM" src="https://github.com/user-attachments/assets/bd65098d-22cf-49c4-a6c8-9f825872d7d2">
+
+## project Demo : https://shiny-centaur-888708.netlify.app/
 
 ## 🚀 Setup and Installation
 
@@ -22,4 +26,4 @@ A 3D interactive web experience that brings the planets of our solar system to l
 ```bash
 git clone https://github.com/SRB003/Threejs-Project1
 
-cd your-Threejs-Project1
+cd your-Threejs-Project1 
